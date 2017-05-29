@@ -3,7 +3,7 @@
 ## Problem
 he ubiquitous X509 Certificate is the most commonly used type of digital certificate. To parse such a certificate, you can use the BouncyCastle PKIX lib (available at https://www.bouncycastle.org/download/bcpkix-jdk15on-157.jar) and a tip is to look at the org.bouncycastle.util.io.pem.PemReader class. 
 
-#Task:
+## Task:
 Create a simple client capable of printing information from the bundled certificate. It will contain several fields, among which will be:
 The issuer, subject and serial number of the certificate
 The validity dates of the certificate (and if it's still valid)
