@@ -26,11 +26,11 @@ a simple (but user friendly) web client
 
 ## Usage examples
 1. java -jar parser.jar certificatePath [commands]
-2. Following command displays all of the certificate data
-java -jar target/parser-1.0-jar-with-dependencies.jar /Documents/certificate.pem -ls 
+2. Following command displays all of the certificate data:
+\n java -jar target/parser-1.0-jar-with-dependencies.jar /Documents/certificate.pem -ls 
 
-3. Following commands dispays organization and serial number of certificate
-java -jar target/parser-1.0-jar-with-dependencies.jar /Documents/certificate.pem -o -sn 
+3. Following commands dispays organization and serial number of certificate:
+\n java -jar target/parser-1.0-jar-with-dependencies.jar /Documents/certificate.pem -o -sn 
 
 ## Author
 Sana Talha
