@@ -1,6 +1,5 @@
 package com.test.parser;
 
-
 import org.apache.commons.cli.*;
 
 import java.util.Arrays;
@@ -36,7 +35,7 @@ public class CLIClient {
     }
 
     public Properties parse(String[] arguments) {
-        Certificate x509Object =  new X509CertificateParser().parseCertificate(arguments[0]);
+        Certificate x509Object = new X509CertificateParser().parseCertificate(arguments[0]);
         Options options = createOptions();
         String[] commands = Arrays.copyOfRange(arguments, 0, arguments.length);
         /* Parse the input */
@@ -82,7 +81,7 @@ public class CLIClient {
     public Properties executeCommands(Options options, CommandLine cmd, Certificate x509Object) {
 
         Properties prop = new Properties();
-        if(cmd != null) {
+        if (cmd != null) {
             prop.put("o", fetchValues("o", "Organization name : ", cmd, x509Object.getOrganization()));
             prop.put("cn", fetchValues("cn", "Common name : ", cmd, x509Object.getCommonName()));
             prop.put("l", fetchValues("l", "Locality : ", cmd, x509Object.getLocality()));

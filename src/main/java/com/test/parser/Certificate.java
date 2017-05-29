@@ -5,37 +5,59 @@ import java.util.Date;
 
 public class Certificate {
 
-    /**  Common name of the certificate **/
+    /**
+     * Common name of the certificate
+     **/
     private String commonName;
 
-    /**  Organization name in the certificate **/
+    /**
+     * Organization name in the certificate
+     **/
     private String organization;
 
-    /**  Locality of certificate **/
+    /**
+     * Locality of certificate
+     **/
     private String locality;
 
-    /**  Country of certificate **/
+    /**
+     * Country of certificate
+     **/
     private String country;
 
-    /**  Validity start date in the certificate **/
+    /**
+     * Validity start date in the certificate
+     **/
     private Date validFrom;
 
-    /**  Validity end date in the certificate **/
+    /**
+     * Validity end date in the certificate
+     **/
     private Date validTo;
 
-    /**  Issuer name of the certificate **/
+    /**
+     * Issuer name of the certificate
+     **/
     private String issuerName;
 
-    /**  Serial number of the certificate **/
+    /**
+     * Serial number of the certificate
+     **/
     private BigInteger serialNumber;
 
-    /**  Validity status of certificate **/
+    /**
+     * Validity status of certificate
+     **/
     private String validityStatus;
 
-    /**  Represent if certificate is self signed or not **/
+    /**
+     * Represent if certificate is self signed or not
+     **/
     private boolean selfSigned;
 
-    /** Getter and Setter methods **/
+    /**
+     * Getter and Setter methods
+     **/
 
     public String getCommonName() {
         return commonName;

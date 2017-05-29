@@ -18,6 +18,7 @@ public class X509CertificateParser implements CertificateParser {
 
     /**
      * Override method from the CertificateParser to parse the certificate using PEMReader
+     *
      * @return X509Certificate object that contains all of the certificate data
      */
     @Override
@@ -64,6 +65,7 @@ public class X509CertificateParser implements CertificateParser {
     /**
      * Fetch the data from parser and creates a new X509Certificate object that contains all data in a user friendly
      * way
+     *
      * @param x509CertificateObject
      * @return X509Certificate that contains all necessary information about the certificate
      */
@@ -76,11 +78,14 @@ public class X509CertificateParser implements CertificateParser {
 
             if (dnProp.get("CN") != null) {
                 x509Obj.setCommonName(dnProp.get("CN").toString());
-            } if (dnProp.get("L") != null) {
+            }
+            if (dnProp.get("L") != null) {
                 x509Obj.setLocality(dnProp.get("L").toString());
-            } if (dnProp.get("O") != null) {
+            }
+            if (dnProp.get("O") != null) {
                 x509Obj.setOrganization(dnProp.get("O").toString());
-            } if (dnProp.get("C") != null) {
+            }
+            if (dnProp.get("C") != null) {
                 x509Obj.setCountry(dnProp.get("C").toString());
             }
             x509Obj.setValidFrom(x509CertificateObject.getNotBefore());
@@ -102,6 +107,7 @@ public class X509CertificateParser implements CertificateParser {
 
     /**
      * To get the properties of a principle
+     *
      * @param principal
      * @return properties
      * @throws IOException
@@ -114,6 +120,7 @@ public class X509CertificateParser implements CertificateParser {
 
     /**
      * Check the validity of certificate by comparing it to current date
+     *
      * @param x509CertificateObject Certificate that needs to be validated
      * @return description about validity of certificate
      */
@@ -132,6 +139,7 @@ public class X509CertificateParser implements CertificateParser {
 
     /**
      * To validate if the certificate is self signed by using the public key
+     *
      * @param cert
      * @return true or false depending on the verification
      */

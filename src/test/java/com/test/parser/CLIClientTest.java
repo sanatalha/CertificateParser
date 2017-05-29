@@ -1,7 +1,7 @@
 package com.test.parser;
 
+import org.apache.commons.cli.Options;
 import org.junit.Test;
-import org.apache.commons.cli.*;
 
 import java.util.Properties;
 
@@ -13,8 +13,7 @@ public class CLIClientTest {
      * To test the valid options in CLI client
      */
     @Test
-    public void testValidOptions()
-    {
+    public void testValidOptions() {
         CLIClient cli = new CLIClient();
         Options options = cli.createOptions();
         assertTrue(options.hasOption("cn"));
@@ -29,10 +28,10 @@ public class CLIClientTest {
     public void testValidCLIProperties() {
         CLIClient cli = new CLIClient();
         Options options = cli.createOptions();
-        String [] commands = {"./resources/c1.pem", "-i", "-vl"};
+        String[] commands = {"./resources/c1.pem", "-i", "-vl"};
         Properties properties = cli.parse(commands);
-        assertEquals("Issuer : EJBCA Sample", properties.getProperty("i") );
-        assertEquals("Validity : Valid Certificate", properties.getProperty("vl") );
+        assertEquals("Issuer : EJBCA Sample", properties.getProperty("i"));
+        assertEquals("Validity : Valid Certificate", properties.getProperty("vl"));
     }
 
 }
